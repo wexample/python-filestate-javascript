@@ -82,7 +82,7 @@ See [CONTRIBUTORS.md](CONTRIBUTORS.md) for the full list of contributors.
 
 ## License
 
-
+MIT
 
 ## Useful Links
 

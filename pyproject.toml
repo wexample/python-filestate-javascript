@@ -11,6 +11,7 @@ dependencies = [
     "cattrs>=23.1.0",
 ]
 classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
+authors = [{name = "weeger", email = "contact@wexample.com"}]
 
 [project.optional-dependencies]
 dev = [
