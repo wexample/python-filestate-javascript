@@ -1,0 +1,31 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+package-dir = "src"
+
+[[tool.pdm.build.packages]]
+include = "wexample_filestate-javascript"
+from = "src"
+[tool.setuptools.packages.find]
+include = ["*"]
+exclude = ["wexample_filestate-javascript.testing*"]
+
+[project]
+requires-python = ">=3.10"
+dependencies = [
+    "attrs>=23.1.0",
+    "cattrs>=23.1.0",
+]
+name = "wexample-filestate-javascript"
+version = "0.0.2"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
