@@ -37,5 +37,5 @@ distribution = true
 package-dir = "src"
 
 [[tool.pdm.build.packages]]
-include = "wexample_filestate-javascript"
+include = "wexample_filestate_javascript"
 from = "src"
