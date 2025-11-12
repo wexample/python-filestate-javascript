@@ -39,3 +39,14 @@ package-dir = "src"
 [[tool.pdm.build.packages]]
 include = "wexample_filestate-javascript"
 from = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["wexample_filestate-javascript"]
+omit = ["*/tests/*", "*/.venv/*", "*/venv/*"]
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "def __repr__", "raise AssertionError", "raise NotImplementedError", "if __name__ == .__main__.:", "if TYPE_CHECKING:", "@abstractmethod"]
