@@ -147,7 +147,7 @@ Free to use in both personal and commercial projects.
 - **Documentation**: [docs.wexample.com](https://docs.wexample.com)
 - **Issue Tracker**: https://github.com/wexample/python-filestate-javascript/issues
 - **Discussions**: https://github.com/wexample/python-filestate-javascript/discussions
-- **PyPI**: [pypi.org/project/wexample-app](https://pypi.org/project/wexample-app/)
+- **PyPI**: [pypi.org/project/wexample-filestate-javascript](https://pypi.org/project/wexample-filestate-javascript/)
 
 ## Integration in the Suite
 
