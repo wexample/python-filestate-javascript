@@ -28,7 +28,7 @@ dev = [
 
 [tool.setuptools.packages.find]
 include = ["*"]
-exclude = ["wexample_filestate-javascript.testing*"]
+exclude = ["wexample_filestate_javascript.testing*"]
 
 [tool.pdm]
 distribution = true
@@ -37,7 +37,7 @@ distribution = true
 package-dir = "src"
 
 [[tool.pdm.build.packages]]
-include = "wexample_filestate-javascript"
+include = "wexample_filestate_javascript"
 from = "src"
 
 [tool.pytest.ini_options]
@@ -45,7 +45,7 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [tool.coverage.run]
-source = ["wexample_filestate-javascript"]
+source = ["wexample_filestate_javascript"]
 omit = ["*/tests/*", "*/.venv/*", "*/venv/*"]
 
 [tool.coverage.report]

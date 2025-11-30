@@ -90,7 +90,7 @@ Breaking changes are clearly documented with upgrade paths and examples.
 
 Current limitations and planned features are tracked in the GitHub issues.
 
-See the [project roadmap](https://github.com/wexample/python-filestate-javascript/issues) for upcoming features and improvements.
+See the [project roadmap](https://github.com/wexample/python-filestate_javascript/issues) for upcoming features and improvements.
 
 ## Security Policy
 
@@ -143,10 +143,10 @@ Free to use in both personal and commercial projects.
 
 ## Useful Links
 
-- **Homepage**: https://github.com/wexample/python-filestate-javascript
+- **Homepage**: https://github.com/wexample/python-filestate_javascript
 - **Documentation**: [docs.wexample.com](https://docs.wexample.com)
-- **Issue Tracker**: https://github.com/wexample/python-filestate-javascript/issues
-- **Discussions**: https://github.com/wexample/python-filestate-javascript/discussions
+- **Issue Tracker**: https://github.com/wexample/python-filestate_javascript/issues
+- **Discussions**: https://github.com/wexample/python-filestate_javascript/discussions
 - **PyPI**: [pypi.org/project/wexample-filestate-javascript](https://pypi.org/project/wexample-filestate-javascript/)
 
 ## Integration in the Suite
