@@ -28,8 +28,8 @@ class BiomeOption(AbstractJavascriptFileContentOption):
                 "check",
                 "--write",
                 "--config-path=/root/biome.json",
-                container_file_path
-            ]
+                container_file_path,
+            ],
         )
 
         # Read the fixed content from the file (it was modified in place)

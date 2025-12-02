@@ -15,7 +15,9 @@ if TYPE_CHECKING:
 class JavascriptOptionsProvider(AbstractOptionsProvider):
     @classmethod
     def get_options(cls) -> list[type[AbstractConfigOption]]:
-        from wexample_filestate_javascript.option.javascript_option import JavascriptOption
+        from wexample_filestate_javascript.option.javascript_option import (
+            JavascriptOption,
+        )
 
         return [
             JavascriptOption,

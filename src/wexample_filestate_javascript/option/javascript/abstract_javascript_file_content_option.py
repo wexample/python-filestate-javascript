@@ -12,11 +12,13 @@ from wexample_filestate.option.mixin.with_docker_option_mixin import (
 from wexample_helpers.decorator.base_class import base_class
 
 if TYPE_CHECKING:
-    from wexample_filestate.const.types_state_items import TargetFileOrDirectoryType
+    pass
 
 
 @base_class
-class AbstractJavascriptFileContentOption(WithDockerOptionMixin, AbstractFileContentOption):
+class AbstractJavascriptFileContentOption(
+    WithDockerOptionMixin, AbstractFileContentOption
+):
     def _get_docker_image_name(self) -> str:
         """Return the Docker image name for JavaScript options."""
         return "wex-javascript-option"
