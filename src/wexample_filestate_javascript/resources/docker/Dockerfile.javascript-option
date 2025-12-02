@@ -1,0 +1,14 @@
+# Base image with Node.js
+FROM node:20-alpine
+
+# Install Biome globally
+RUN npm install -g @biomejs/biome
+
+# Copy Biome configuration
+COPY biome.json /root/biome.json
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Keep container running
+CMD ["tail", "-f", "/dev/null"]
