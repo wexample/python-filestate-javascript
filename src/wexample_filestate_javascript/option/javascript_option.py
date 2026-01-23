@@ -38,10 +38,14 @@ class JavascriptOption(OptionMixin, WithDockerOptionMixin, AbstractNestedConfigO
         from wexample_filestate_javascript.option.javascript.biome_option import (
             BiomeOption,
         )
+        from wexample_filestate_javascript.option.javascript.npm_package_lock_option import (
+            NpmPackageLockOption,
+        )
 
         return [
             # filestate: javascript-iterable-sort
             BiomeOption,
+            NpmPackageLockOption,
         ]
 
     def set_value(self, raw_value: Any) -> None:
