@@ -27,7 +27,7 @@ class BiomeOption(AbstractJavascriptFileContentOption):
                 "biome",
                 "check",
                 "--write",
-                "--config-path=/root/biome.json",
+                "--config-path=/tmp/biome.json",
                 container_file_path,
             ],
         )
