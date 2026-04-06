@@ -21,7 +21,7 @@ class AbstractJavascriptFileContentOption(
 ):
     def _get_docker_image_name(self) -> str:
         """Return the Docker image name for JavaScript options."""
-        return "wex-javascript-option"
+        return "javascript-option"
 
     def _get_dockerfile_path(self) -> Path:
         """Return the path to the JavaScript Dockerfile."""
