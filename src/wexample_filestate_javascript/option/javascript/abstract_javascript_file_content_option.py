@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING
 from wexample_filestate.option.abstract_file_content_option import (
     AbstractFileContentOption,
 )
-from wexample_filestate.option.mixin.with_docker_option_mixin import (
-    WithDockerOptionMixin,
+from wexample_filestate.option.mixin.with_runner_option_mixin import (
+    WithRunnerOptionMixin,
 )
 from wexample_helpers.decorator.base_class import base_class
 
@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
 @base_class
 class AbstractJavascriptFileContentOption(
-    WithDockerOptionMixin, AbstractFileContentOption
+    WithRunnerOptionMixin, AbstractFileContentOption
 ):
     def _get_docker_image_name(self) -> str:
         """Return the Docker image name for JavaScript options."""
