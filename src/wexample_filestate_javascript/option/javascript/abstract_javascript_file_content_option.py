@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, ClassVar
 
 from wexample_filestate.option.abstract_file_content_option import (
     AbstractFileContentOption,
@@ -19,7 +19,10 @@ if TYPE_CHECKING:
 class AbstractJavascriptFileContentOption(
     WithRunnerOptionMixin, AbstractFileContentOption
 ):
-    DOCKER_IMAGE_NAME: str = "javascript-option"
+    DOCKER_IMAGE_NAME: ClassVar[str] = "javascript-option"
+
+    def _get_docker_image_name(self) -> str:
+        return self.DOCKER_IMAGE_NAME
 
     def _get_dockerfile_path(self) -> Path:
         """Return the path to the JavaScript Dockerfile."""
