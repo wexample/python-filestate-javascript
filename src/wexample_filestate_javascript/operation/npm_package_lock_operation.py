@@ -21,8 +21,17 @@ class NpmPackageLockOperation(AbstractOperation):
 
     def apply_operation(self) -> None:
         package_dir = Path(self.target.get_path())
+        lockfile = package_dir / "package-lock.json"
+        if lockfile.exists():
+            lockfile.unlink()
         shell_run(
-            ["npm", "install", "--package-lock-only", "--ignore-scripts"],
+            [
+                "npm",
+                "install",
+                "--package-lock-only",
+                "--ignore-scripts",
+                "--prefer-online",
+            ],
             inherit_stdio=True,
             cwd=package_dir,
         )
