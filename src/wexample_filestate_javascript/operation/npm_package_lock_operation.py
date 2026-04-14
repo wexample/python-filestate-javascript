@@ -25,7 +25,13 @@ class NpmPackageLockOperation(AbstractOperation):
         if lockfile.exists():
             lockfile.unlink()
         shell_run(
-            ["npm", "install", "--package-lock-only", "--ignore-scripts", "--prefer-online"],
+            [
+                "npm",
+                "install",
+                "--package-lock-only",
+                "--ignore-scripts",
+                "--prefer-online",
+            ],
             inherit_stdio=True,
             cwd=package_dir,
         )
