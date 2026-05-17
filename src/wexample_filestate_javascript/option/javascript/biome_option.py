@@ -7,6 +7,8 @@ from wexample_helpers.decorator.base_class import base_class
 from .abstract_javascript_file_content_option import AbstractJavascriptFileContentOption
 
 if TYPE_CHECKING:
+    from pathlib import Path
+
     from wexample_filestate.const.types_state_items import TargetFileOrDirectoryType
 
 
@@ -20,17 +22,17 @@ class BiomeOption(AbstractJavascriptFileContentOption):
         path_key = str(target.get_path())
         if path_key in cache:
             return cache[path_key]
-        # Target wasn't part of the batch (e.g. already rectified) → fall back.
         return target.read_text()
 
-    def _run_batch_on_targets(
+    def _run_batch_on_paths(
         self,
         reference_target: TargetFileOrDirectoryType,
-        targets: list[TargetFileOrDirectoryType],
+        paths: list[Path],
     ) -> None:
         self._ensure_docker_container(reference_target)
-        container_paths = [self._get_container_file_path(t) for t in targets]
-        self._get_or_create_runner(reference_target).execute(
+        runner = self._get_or_create_runner(reference_target)
+        container_paths = [runner.rebase_path(p) for p in paths]
+        runner.execute(
             cmd=[
                 "biome",
                 "check",
