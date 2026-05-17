@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING, ClassVar
 from wexample_filestate.option.abstract_file_content_option import (
     AbstractFileContentOption,
 )
-from wexample_filestate.option.mixin.with_runner_option_mixin import (
-    WithRunnerOptionMixin,
+from wexample_filestate.option.mixin.with_batch_docker_option_mixin import (
+    WithBatchDockerOptionMixin,
 )
 from wexample_helpers.decorator.base_class import base_class
 
@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
 @base_class
 class AbstractJavascriptFileContentOption(
-    WithRunnerOptionMixin, AbstractFileContentOption
+    WithBatchDockerOptionMixin, AbstractFileContentOption
 ):
     DOCKER_IMAGE_NAME: ClassVar[str] = "javascript-option"
 
