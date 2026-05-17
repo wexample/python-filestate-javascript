@@ -16,21 +16,26 @@ class BiomeOption(AbstractJavascriptFileContentOption):
         return "Format and lint JavaScript/TypeScript code using Biome."
 
     def _apply_content_change(self, target: TargetFileOrDirectoryType) -> str:
-        """Format and lint JavaScript/TypeScript code using Biome via Docker."""
-        # Get the file path inside the container
-        container_file_path = self._get_container_file_path(target)
+        cache = self._get_or_build_batch_cache(target)
+        path_key = str(target.get_path())
+        if path_key in cache:
+            return cache[path_key]
+        # Target wasn't part of the batch (e.g. already rectified) → fall back.
+        return target.read_text()
 
-        # Execute biome in Docker with centralized config
-        self._execute_in_docker(
-            target=target,
-            command=[
+    def _run_batch_on_targets(
+        self,
+        reference_target: TargetFileOrDirectoryType,
+        targets: list[TargetFileOrDirectoryType],
+    ) -> None:
+        self._ensure_docker_container(reference_target)
+        container_paths = [self._get_container_file_path(t) for t in targets]
+        self._get_or_create_runner(reference_target).execute(
+            cmd=[
                 "biome",
                 "check",
                 "--write",
                 "--config-path=/tmp/biome.json",
-                container_file_path,
-            ],
+                *container_paths,
+            ]
         )
-
-        # Read the fixed content from the file (it was modified in place)
-        return target.read_text()
