@@ -32,7 +32,7 @@ class BiomeOption(AbstractJavascriptFileContentOption):
         self._ensure_docker_container(reference_target)
         runner = self._get_or_create_runner(reference_target)
         container_paths = [runner.rebase_path(p) for p in paths]
-        runner.execute(
+        return runner.execute(
             cmd=[
                 "biome",
                 "check",
