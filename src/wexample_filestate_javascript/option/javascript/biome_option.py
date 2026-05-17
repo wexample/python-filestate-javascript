@@ -35,7 +35,7 @@ class BiomeOption(AbstractJavascriptFileContentOption):
         return runner.execute(
             cmd=[
                 "biome",
-                "check",
+                "format",
                 "--write",
                 "--config-path=/tmp/biome.json",
                 *container_paths,
