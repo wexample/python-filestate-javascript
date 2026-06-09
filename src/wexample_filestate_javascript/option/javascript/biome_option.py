@@ -24,6 +24,10 @@ class BiomeOption(AbstractJavascriptFileContentOption):
             return cache[path_key]
         return target.read_text()
 
+    # Biome is RAM-hungry on large generated files; chunking avoids OOM kills
+    # (SIGKILL exit 137) when rectifying suites with 100+ TypeScript files.
+    _BATCH_CHUNK_SIZE: int = 30
+
     def _run_batch_on_paths(
         self,
         reference_target: TargetFileOrDirectoryType,
@@ -31,13 +35,15 @@ class BiomeOption(AbstractJavascriptFileContentOption):
     ) -> None:
         self._ensure_docker_container(reference_target)
         runner = self._get_or_create_runner(reference_target)
-        container_paths = [runner.rebase_path(p) for p in paths]
-        return runner.execute(
-            cmd=[
-                "biome",
-                "format",
-                "--write",
-                "--config-path=/tmp/biome.json",
-                *container_paths,
-            ]
-        )
+        for i in range(0, len(paths), self._BATCH_CHUNK_SIZE):
+            chunk = paths[i : i + self._BATCH_CHUNK_SIZE]
+            container_paths = [runner.rebase_path(p) for p in chunk]
+            runner.execute(
+                cmd=[
+                    "biome",
+                    "format",
+                    "--write",
+                    "--config-path=/tmp/biome.json",
+                    *container_paths,
+                ]
+            )
