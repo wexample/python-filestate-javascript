@@ -39,7 +39,6 @@ class BiomeOption(AbstractJavascriptFileContentOption):
         ".generated.mjs",
         ".generated.cjs",
     )
-
     # Specific framework-generated files that don't carry a `.gen` suffix.
     _GENERATED_FILE_BASENAMES: frozenset[str] = frozenset(
         {
@@ -47,7 +46,6 @@ class BiomeOption(AbstractJavascriptFileContentOption):
             "vite-env.d.ts",  # scaffolded by Vite, often re-emitted
         }
     )
-
     # Path fragments indicating a directory of generated artifacts.
     _GENERATED_PATH_FRAGMENTS: tuple[str, ...] = (
         "/__generated__/",  # Relay, Apollo, generic codegen convention
