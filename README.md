@@ -1,6 +1,6 @@
 # filestate_javascript
 
-Version: 6.4.0
+Version: 6.4.1
 
 ## Table of Contents
 
@@ -80,7 +80,7 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 
 - attrs: >=23.1.0
 - cattrs: >=23.1.0
-- wexample-filestate: >=12.0.0
+- wexample-filestate: >=12.1.0
 
 ## Versioning & Compatibility Policy
 
