@@ -1,6 +1,6 @@
 # filestate_javascript
 
-Version: 6.4.1
+Version: 6.4.2
 
 ## Table of Contents
 
