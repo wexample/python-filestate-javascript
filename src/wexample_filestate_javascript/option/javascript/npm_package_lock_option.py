@@ -31,10 +31,9 @@ class NpmPackageLockOption(OptionMixin, AbstractConfigOption):
         )
 
         value = self.get_value()
-        if value is not None and value.is_none():
-            return None
-        if value is not None and value.is_bool() and not value.get_bool():
-            return None
+        if value is not None:
+            if value.is_none() or (value.is_bool() and not value.get_bool()):
+                return None
 
         package_dir = Path(target.get_path())
         package_json = package_dir / "package.json"

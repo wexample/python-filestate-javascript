@@ -66,7 +66,7 @@ class BiomeOption(AbstractJavascriptFileContentOption):
         name = path.name
         if name in self._GENERATED_FILE_BASENAMES:
             return True
-        if any(name.endswith(suffix) for suffix in self._GENERATED_FILE_SUFFIXES):
+        if name.endswith(self._GENERATED_FILE_SUFFIXES):
             return True
         path_str = str(path)
         if any(fragment in path_str for fragment in self._GENERATED_PATH_FRAGMENTS):
