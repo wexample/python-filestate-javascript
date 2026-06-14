@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/operation/npm_package_lock_operation.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:10:13+00:00",
+  "last_rev": "d9988144abe9f77e932aa063cab3f2645697d5ba",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "cost dominated by npm subprocess and fs I/O, no python hot path",
+  "in_progress": null
+}
