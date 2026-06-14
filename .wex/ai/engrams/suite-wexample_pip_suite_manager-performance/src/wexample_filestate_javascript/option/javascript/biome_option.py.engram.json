@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/option/javascript/biome_option.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:10:53+00:00",
+  "last_rev": "061d406d5463495bc0940bb2d4e151b3aab1d708",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "checks already use frozenset/endswith; batch cost dominated by biome docker subprocess",
+  "in_progress": null
+}
