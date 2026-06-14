@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/options_provider/javascript_options_provider.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:11:40+00:00",
+  "last_rev": "c7ff35e46f225f36d14964f7cca4663d4b9f4974",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "trivial classmethod getters returning constant/single-element list, no hot path",
+  "in_progress": null
+}
