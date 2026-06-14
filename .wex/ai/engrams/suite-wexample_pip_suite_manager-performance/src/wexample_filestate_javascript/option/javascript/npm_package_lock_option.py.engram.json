@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/option/javascript/npm_package_lock_option.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:11:13+00:00",
+  "last_rev": "10620219e17b7132a032a43899ee61b9d24c2840",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "per-target fs stat checks and npm subprocess dominate, no python hot path",
+  "in_progress": null
+}
