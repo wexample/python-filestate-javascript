@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/file/javascript_file.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:09:59+00:00",
+  "last_rev": "4ffb19ef8e5faa4ab73a6766df258abe2c2ae9b6",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "classvar and trivial extension getter, no hot path",
+  "in_progress": null
+}
