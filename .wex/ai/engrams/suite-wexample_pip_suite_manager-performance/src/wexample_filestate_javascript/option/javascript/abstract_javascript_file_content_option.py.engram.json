@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/option/javascript/abstract_javascript_file_content_option.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:10:29+00:00",
+  "last_rev": "2e82673aae53e5f830ba14d94d435ea8e8b9d0a4",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "trivial getters and rare docker-setup path build, no hot path",
+  "in_progress": null
+}
