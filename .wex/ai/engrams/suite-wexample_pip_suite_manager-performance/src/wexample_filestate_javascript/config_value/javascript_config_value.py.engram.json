@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/config_value/javascript_config_value.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:09:49+00:00",
+  "last_rev": "b369e3a86c56f92a66ee65ed92e6cdb4f29d174b",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "only field declarations and trivial dict builder, no hot path",
+  "in_progress": null
+}
