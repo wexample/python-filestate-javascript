@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/config_option/biome_config_option.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:09:38+00:00",
+  "last_rev": "568008eaf976924bad6865d15e5bf80952c63258",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "trivial static name getter, no hot path",
+  "in_progress": null
+}
