@@ -1,0 +1,11 @@
+{
+  "engram_version": 1,
+  "source_key": "src/wexample_filestate_javascript/option/javascript_option.py",
+  "cache_nonce": "1c2800147ebc4367950bb7b61bd21d00",
+  "last_visited_at": "2026-06-14T11:11:27+00:00",
+  "last_rev": "ea3b868da1a04426442d84d23f604fc8db702e10",
+  "last_decision": "skip",
+  "kinds": [],
+  "notes": "trivial getters/delegation and one-time config set_value, no hot path",
+  "in_progress": null
+}
